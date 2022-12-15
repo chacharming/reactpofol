@@ -1,9 +1,11 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import 'swiper/css';
+import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
         </h1>
         <Navi></Navi>        
       </header>
-      <Sliderswiper></Sliderswiper>
+      <Chachaswiper></Chachaswiper>
       <Preinterview></Preinterview>
       <Footer></Footer>
     </div>
@@ -52,34 +54,30 @@ function Navi(){
   )
 }
 
-const Sliderswiper = () => {
- 
-    return (
-      <Swiper
-      // install Swiper modules
+const Chachaswiper = () => {
+  return(
+    <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-      spaceBetween={50}
-      slidesPerView={3}
+      spaceBetween={0}
+      slidesPerView={1}
       navigation
-      autoplay={{
-        "delay": 2500,
-        "disableOnInteraction": false
-      }}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
-
-      
     >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>     
-      </Swiper>
-    );
- 
+      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 2</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+    </Swiper>
+  )
 }
+
 const Preinterview = () => {
   return(
     <section className="section py-5 text-center">
