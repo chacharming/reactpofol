@@ -2,6 +2,7 @@
     font-family: 'Raleway', 'IBM Plex+Sans KR';
     font-weight: 300;
 }
+h3{ font-weight: 300;}
 li{
     list-style: none;
 }
@@ -12,5 +13,53 @@ li{
     }
     a:hover{
         color:rgb(227, 96, 73);
+    }
+}
+
+.pofolswiper{
+    .swiper-slide{
+        min-height: calc(100vh - 120px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+    .swiper-wrapper{
+        .react{
+            background-image: url('./img/pofol_01.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: rgba(0, 0, 0, .3);
+        }
+        .boot{
+            background-image: url('./img/pofol_01.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: rgba(0, 0, 0, .3);
+        }
+        .sir{
+            background-image: url('./img/pofol_01.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: rgba(0, 0, 0, .3);
+        }
+    }
+    .swiper-pagination{
+        .swiper-pagination-bullet{
+            width: 5px;
+            padding: 5px;
+            border: 1px solid #eee;
+            border-radius: 30px;
+            opacity: 1;
+            background: #eee;
+            margin: 0 8px;
+        }
+        .swiper-pagination-bullet-active{
+            border: 1px solid #9ca2c2;
+            background: #9ca2c2;
+        }
     }
 }
